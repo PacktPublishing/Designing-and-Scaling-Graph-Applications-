@@ -4,3 +4,8 @@
 
 /.vs
 
+/ch1/GraphColoring/.vs/GraphColoring
+/ch1/GraphColoring/bin/Debug/netcoreapp3.1
+/ch1/GraphColoring/obj
+/ch1/GraphRepresentation/.vs/GraphRepresentation/DesignTimeBuild
+/ch1/GraphRepresentation/.vs/GraphRepresentation/v16/.suo
