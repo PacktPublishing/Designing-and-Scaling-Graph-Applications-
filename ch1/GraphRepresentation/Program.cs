@@ -3,41 +3,37 @@
     using System;
     using System.Collections.Generic;
 
-    class Graph
+    class GraphAdjucencyList
     {
         public static void Main()
         {
-            // Creating a graph with 5 vertices's
-            int V = 5;
-            LinkedList<int>[] adj = new LinkedList<int>[V];
+            int vertexCount = 5;
+            LinkedList<int>[] linkedList = new LinkedList<int>[vertexCount];
 
-            for (int i = 0; i < V; i++)
+            for (int i = 0; i < vertexCount; i++)
             {
-                adj[i] = new LinkedList<int>();
+                linkedList[i] = new LinkedList<int>();
             }
 
-            // Adding edges one by one
-            AddEdge(adj, 0, 1);
-            AddEdge(adj, 0, 4);
-            AddEdge(adj, 1, 2);
-            AddEdge(adj, 1, 3);
-            AddEdge(adj, 1, 4);
-            AddEdge(adj, 2, 3);
-            AddEdge(adj, 3, 4);
+            AddEdge(linkedList, 0, 1);
+            AddEdge(linkedList, 0, 4);
+            AddEdge(linkedList, 1, 2);
+            AddEdge(linkedList, 1, 3);
+            AddEdge(linkedList, 1, 4);
+            AddEdge(linkedList, 2, 3);
+            AddEdge(linkedList, 3, 4);
 
-            PrintGraph(adj);
+            PrintGraph(linkedList);
 
             Console.ReadKey();
         }
 
-        // A utility function to add an edge in an undirected graph
         static void AddEdge(LinkedList<int>[] adj, int u, int v)
         {
             adj[u].AddLast(v);
             adj[v].AddLast(u);
         }
 
-        // A utility function to print the adjacency list representation of graph
         static void PrintGraph(LinkedList<int>[] adj)
         {
             for (int i = 0; i < adj.Length; i++)
