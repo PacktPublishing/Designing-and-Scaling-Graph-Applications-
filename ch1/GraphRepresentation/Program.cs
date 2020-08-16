@@ -5,10 +5,9 @@
 
     class Graph
     {
-        // Driver Code  
         public static void Main()
         {
-            // Creating a graph with 5 vertices's  
+            // Creating a graph with 5 vertices's
             int V = 5;
             LinkedList<int>[] adj = new LinkedList<int>[V];
 
@@ -17,7 +16,7 @@
                 adj[i] = new LinkedList<int>();
             }
 
-            // Adding edges one by one  
+            // Adding edges one by one
             AddEdge(adj, 0, 1);
             AddEdge(adj, 0, 4);
             AddEdge(adj, 1, 2);
@@ -31,14 +30,14 @@
             Console.ReadKey();
         }
 
-        // A utility function to add an edge in an undirected graph  
+        // A utility function to add an edge in an undirected graph
         static void AddEdge(LinkedList<int>[] adj, int u, int v)
         {
             adj[u].AddLast(v);
             adj[v].AddLast(u);
         }
 
-        // A utility function to print the adjacency list representation of graph  
+        // A utility function to print the adjacency list representation of graph
         static void PrintGraph(LinkedList<int>[] adj)
         {
             for (int i = 0; i < adj.Length; i++)
